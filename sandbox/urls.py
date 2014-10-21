@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from student.views import *
+from movie.views import *
 
 urlpatterns = patterns('',
     # Examples:
@@ -10,4 +11,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^student/$', student_view),
     url(r'^api/(?P<msg>\w+)$', json),
+    url(r'^movie_audi/(?P<date>\d+-\d+-\d+)/$', movie_),
 )
